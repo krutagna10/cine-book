@@ -1,13 +1,111 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  /* Font Family */
+  --font-barlow-condensed: "Barlow Condensed", sans-serif;
+
+  /* Font Sizes*/
+
+  /* Font Weight */
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* Color */
+  --blue: hsl(212, 100%, 50%);
+  --white: hsl(0, 100%, 100%);
+
+  /* Spacing */
+  --flow-space: 1rem;
+  --gap: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+body {
+  font-family: var(--font-barlow-condensed);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  line-height: 1.5;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Temporary Styling */
+/* Table Styling */
+table {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+button {
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0.25rem 1.5rem;
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  text-align: center;
 }
