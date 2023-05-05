@@ -1,21 +1,36 @@
-import MovieProvider from "../../context/MovieProvider";
-import { useContext } from "react";
-import MovieContext from "../../context/MovieContext";
 import Main from "../../layout/Main";
+import { Link } from "react-router-dom";
 
 function Summary() {
-  const context = useContext(MovieContext);
-  console.log(context);
-
-  function handleShowMovie() {
-    console.log(context);
-  }
+  const movie = JSON.parse(localStorage.getItem("movie"));
+  console.log(movie);
 
   return (
     <Main>
-      <div>
+      <div style={{ maxWidth: "48rem" }}>
         <h1>Summary</h1>
-        <button onClick={handleShowMovie}>Show Movie</button>
+        <table>
+          <thead>
+            <tr>
+              <th>Movie Name</th>
+              <th>Summary</th>
+              <th>Book Ticket Button</th>
+              <th>Go Back Button</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{movie.name}</td>
+              <td>{movie.summary}</td>
+              <td>
+                <button>Book a Ticket</button>
+              </td>
+              <td>
+                <Link to="/">Go Back</Link>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </Main>
   );

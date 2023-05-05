@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Movies from "../../components/Movies/Movies";
-import MovieProvider from "../../context/MovieProvider";
 import Main from "../../layout/Main";
 
 function Home() {

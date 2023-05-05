@@ -1,15 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import MovieContext from "../../context/MovieContext";
 
 function MovieItem({ index, item }) {
-  const { onSetMovie } = useContext(MovieContext);
   const navigate = useNavigate();
 
   function handleClick() {
-    console.log("Hello World");
-    onSetMovie(item.show);
-    console.log(item.show);
+    localStorage.setItem("movie", JSON.stringify(item.show));
     navigate("/summary");
   }
 

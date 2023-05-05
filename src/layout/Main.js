@@ -1,11 +1,5 @@
-import MovieProvider from "../context/MovieProvider";
-
 function Main({ children }) {
-  return (
-    <>
-      <MovieProvider>{children}</MovieProvider>
-    </>
-  );
+  return <>{children}</>;
 }
 
 export default Main;
