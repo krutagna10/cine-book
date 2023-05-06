@@ -4,7 +4,6 @@ import Summary from "../../components/Summary/Summary";
 
 function Booking() {
   const movie = JSON.parse(localStorage.getItem("movie"));
-  console.log(movie);
 
   return (
     <Main>

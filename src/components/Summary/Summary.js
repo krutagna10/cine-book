@@ -40,8 +40,12 @@ function Summary({ movie }) {
             <h2>{movie.name}</h2>
             <h3>Ticket Price: $20</h3>
             <p>{movie.summary}</p>
-            <p>Status: {movie.status}</p>
-            <p>Rating: {movie.rating.average}</p>
+            {movie.summary}
+            <p>
+              Rating:{" "}
+              {movie.rating.average ? movie.rating.average : "Not rated"}
+            </p>
+            <p>Language: {movie.language}</p>
             <p>Genre: {movie.genres.join(", ")}</p>
             <button
               className="summary__btn btn btn--green"

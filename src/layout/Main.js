@@ -5,7 +5,7 @@ function Main({ children }) {
   return (
     <CartProvider>
       <Header />
-      {children}
+      <main>{children}</main>
     </CartProvider>
   );
 }

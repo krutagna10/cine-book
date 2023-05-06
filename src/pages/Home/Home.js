@@ -3,7 +3,7 @@ import Main from "../../layout/Main";
 import Movies from "../../components/Movies/Movies";
 
 function Home() {
-  const [data, setData] = useState([]);
+  const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -13,7 +13,10 @@ function Home() {
   async function fetchData() {
     const response = await fetch("https://api.tvmaze.com/search/shows?q=all");
     const data = await response.json();
-    setData(data);
+    const transformedData = data
+      .map((item) => item.show)
+      .filter((item) => item.image !== null);
+    setMovies(transformedData);
     setIsLoading(false);
   }
 
@@ -28,8 +31,7 @@ function Home() {
   return (
     <Main>
       <div className="app">
-        <Movies data={data} />
-        {/*<BookTicket />*/}
+        <Movies movies={movies} />
       </div>
     </Main>
   );

@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import "./MovieCard.css";
 
-function MovieCard({ item }) {
+function MovieCard({ movie }) {
   const navigate = useNavigate();
 
   function handleClick() {
-    localStorage.setItem("movie", JSON.stringify(item.show));
+    localStorage.setItem("movie", JSON.stringify(movie));
     navigate("/booking");
   }
 
@@ -13,14 +13,17 @@ function MovieCard({ item }) {
     <div className="card">
       <img
         className="card__image"
-        src={item.show.image.original}
-        alt={item.show.name}
+        src={movie.image.original}
+        alt={movie.name}
       />
       <div className="card__content flow">
-        <h2>{item.show.name}</h2>
-        <p>Status: {item.show.status}</p>
-        <p>Rating: {item.show.rating.average}</p>
-        <p>Genre: {item.show.genres.join(", ")}</p>
+        <h2>{movie.name}</h2>
+        <p>Status: {movie.status}</p>
+        <p>
+          Rating: {movie.rating.average ? movie.rating.average : "Not rated"}
+        </p>
+        <p>Language: {movie.language}</p>
+        <p>Genre: {movie.genres.join(", ")}</p>
         <button onClick={handleClick} className="card__btn btn btn--green">
           View Details
         </button>

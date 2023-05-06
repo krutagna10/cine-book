@@ -90,6 +90,10 @@ button {
   font-weight: 500;
 }
 
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
 .loading {
   min-height: 100vh;
   display: grid;
