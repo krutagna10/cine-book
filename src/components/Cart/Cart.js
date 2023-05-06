@@ -29,7 +29,7 @@ function Cart({ onHideCart }) {
             ))}
           </>
         ) : (
-          <h2>No items in the cart</h2>
+          <h3>Cart empty</h3>
         )}
       </ul>
       <div className="total">
@@ -41,7 +41,7 @@ function Cart({ onHideCart }) {
           Close
         </button>
         {hasItems && (
-          <button className="btn  btn--green" onClick={onHideCart}>
+          <button className="btn  btn--green" onClick={handleOrderItems}>
             Order
           </button>
         )}
