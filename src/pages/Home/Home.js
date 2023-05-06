@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
-import Movies from "../../components/Movies/Movies";
 import Main from "../../layout/Main";
+import MovieList from "../../components/MovieList/MovieList";
+import Backdrop from "../../components/UI/Backdrop/Backdrop";
+import Modal from "../../components/UI/Modal/Modal";
+import BookTicket from "../../components/BookTicket/BookTicket";
 
 function Home() {
   const [data, setData] = useState([]);
@@ -24,8 +27,8 @@ function Home() {
   return (
     <Main>
       <div className="app">
-        <h1>App Component</h1>
-        <Movies data={data} />
+        <MovieList data={data} />
+        {/*<BookTicket />*/}
       </div>
     </Main>
   );

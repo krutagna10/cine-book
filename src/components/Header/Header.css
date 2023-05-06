@@ -1,0 +1,13 @@
+.header {
+  background-color: var(--white);
+  padding-block: 1rem;
+}
+
+.header__heading-link {
+  text-decoration: none;
+}
+
+.header__heading {
+  font-size: 2.5rem;
+  color: var(--black);
+}

@@ -1,21 +1,17 @@
-import MovieItem from "../MovieItem/MovieItem";
+import MovieCard from "../MovieCard/MovieCard";
+import "./MovieList.css";
+import Container from "../UI/Container/Container";
 
 function MovieList({ data }) {
+  console.log(data);
+
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Movie Name</th>
-          <th>Movie Image</th>
-          <th>Preview Movie Button</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((item, index) => (
-          <MovieItem item={item} index={index} key={index} />
-        ))}
-      </tbody>
-    </table>
+    <Container className="movies grid">
+      {data.map(
+        (item, index) =>
+          item.show.image && <MovieCard item={item} index={index} key={index} />
+      )}
+    </Container>
   );
 }
 

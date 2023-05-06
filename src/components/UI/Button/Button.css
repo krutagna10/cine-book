@@ -1,0 +1,35 @@
+/* Button Utility */
+.btn {
+  display: block;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn--red {
+  background-color: var(--light-red);
+}
+
+.btn--red:hover {
+  background-color: var(--red);
+}
+
+.btn--green {
+  background-color: var(--light-green);
+}
+
+.btn--green:hover {
+  background-color: var(--green);
+}
+
+.btn--yellow {
+  background-color: #ffe066;
+}
+
+.btn--yellow:hover {
+  background-color: #fcc419;
+}

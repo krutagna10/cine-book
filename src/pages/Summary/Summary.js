@@ -1,5 +1,6 @@
 import Main from "../../layout/Main";
 import { Link } from "react-router-dom";
+import SummaryCard from "../../components/SummaryCard/SummaryCard";
 
 function Summary() {
   const movie = JSON.parse(localStorage.getItem("movie"));
@@ -7,30 +8,9 @@ function Summary() {
 
   return (
     <Main>
-      <div style={{ maxWidth: "48rem" }}>
+      <div style={{}}>
         <h1>Summary</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>Movie Name</th>
-              <th>Summary</th>
-              <th>Book Ticket Button</th>
-              <th>Go Back Button</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{movie.name}</td>
-              <td>{movie.summary}</td>
-              <td>
-                <button>Book a Ticket</button>
-              </td>
-              <td>
-                <Link to="/">Go Back</Link>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <SummaryCard movie={movie} />
       </div>
     </Main>
   );

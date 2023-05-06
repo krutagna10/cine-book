@@ -9,14 +9,20 @@
   --font-barlow-condensed: "Barlow Condensed", sans-serif;
 
   /* Font Sizes*/
-
-  /* Font Weight */
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
+  --font-size-300: 2rem;
+  --font-size-200: 0.875rem;
+  --font-size-100: 0.75rem;
 
   /* Color */
-  --blue: hsl(212, 100%, 50%);
-  --white: hsl(0, 100%, 100%);
+  --black: hsl(270, 3%, 11%);
+  --dark-blue: hsl(238, 29%, 16%);
+  --white: #fffbfb;
+  --grey: #f0eef1;
+  --red: #ff7070;
+  --green: #76e572;
+  --light-green: #9fff9c;
+  --light-red: #ff9c9c;
+  --blue: #24a0ed;
 
   /* Spacing */
   --flow-space: 1rem;
@@ -57,9 +63,10 @@ h3 {
 body {
   font-family: var(--font-barlow-condensed);
   min-height: 100vh;
-  display: grid;
-  place-content: center;
   line-height: 1.5;
+  background-color: #e7e0e0;
+  position: relative;
+  font-weight: 500;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -108,4 +115,52 @@ button {
 h1,
 h2 {
   text-align: center;
+}
+
+/* Spacing */
+.flow > * + * {
+  margin-top: var(--flow-space);
+}
+
+/* Flex Utility */
+.flex {
+  display: flex;
+}
+
+.flex--gap {
+  gap: var(--gap);
+}
+
+.flex--justify-space {
+  justify-content: space-between;
+}
+
+.flex--align-center {
+  align-items: center;
+}
+
+.flex--justify-center {
+  justify-content: center;
+}
+
+.flex--center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Grid Utility */
+.grid {
+  display: grid;
+}
+
+.grid--gap {
+  gap: var(--gap);
+}
+
+.grid--content-center {
+  place-content: center;
+}
+
+.grid--items-center {
+  place-items: center;
 }
