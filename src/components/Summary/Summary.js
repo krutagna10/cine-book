@@ -50,7 +50,7 @@ function Summary({ movie }) {
               Book a Ticket
             </button>
             <Link className="summary__link btn btn--yellow" to="/">
-              See Movie List
+              Go Back
             </Link>
           </div>
         </div>
