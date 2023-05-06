@@ -3,7 +3,7 @@ Cine Book is demo application used to book movie tickets
 
 ### Links
 
-- Live Site URL: [https://online-library-10.vercel.app/]
+- Live Site URL: [https://cine-book-10.vercel.app/]
 
 ### Screenshot
 
