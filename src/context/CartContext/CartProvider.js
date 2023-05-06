@@ -1,7 +1,8 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import CartContext from "./CartContext.js";
 
 const INITIAL_ITEMS = [];
+localStorage.setItem("items", JSON.stringify(INITIAL_ITEMS));
 
 function reducer(items, action) {
   switch (action.type) {
@@ -42,9 +43,14 @@ function reducer(items, action) {
 }
 
 function CardProvider({ children }) {
-  const [items, dispatch] = useReducer(reducer, INITIAL_ITEMS);
+  const [items, dispatch] = useReducer(
+    reducer,
+    JSON.parse(localStorage.getItem("items"))
+  );
 
-  console.log(items);
+  useEffect(() => {
+    localStorage.setItem("items", JSON.stringify(items));
+  }, [items]);
 
   function handleAddItem(item) {
     dispatch({ type: "add-item", item: item });
