@@ -5,12 +5,17 @@ import React from "react";
 import "./Cart.css";
 import CartItem from "../CartItem/CartItem";
 
-function Cart({ onShowCart, onHideCart }) {
-  const { items } = useContext(CartContext);
+function Cart({ onHideCart }) {
+  const { items, onResetItems } = useContext(CartContext);
 
   const totalAmount = items.reduce((acc, item) => {
     return acc + item.price * item.quantity;
   }, 0);
+
+  function handleOrderItems() {
+    onResetItems();
+    onHideCart();
+  }
 
   const hasItems = items.length > 0;
 
@@ -36,7 +41,7 @@ function Cart({ onShowCart, onHideCart }) {
           Close
         </button>
         {hasItems && (
-          <button className="btn  btn--green" onClick={onShowCart}>
+          <button className="btn  btn--green" onClick={onHideCart}>
             Order
           </button>
         )}

@@ -39,6 +39,14 @@ function reducer(items, action) {
 
       return nextItems;
     }
+
+    case "reset-items": {
+      return [];
+    }
+
+    default: {
+      throw new Error("Invalid action " + action.type);
+    }
   }
 }
 
@@ -60,10 +68,15 @@ function CardProvider({ children }) {
     dispatch({ type: "remove-item", deleteId: deleteId });
   }
 
+  function handleResetItems() {
+    dispatch({ type: "reset-items" });
+  }
+
   const cartContext = {
     items: items,
     onAddItem: handleAddItem,
     onRemoveItem: handleRemoveItem,
+    onResetItems: handleResetItems,
   };
 
   return (

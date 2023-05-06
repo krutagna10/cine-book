@@ -13,18 +13,34 @@
 }
 
 .header__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem;
-  border-radius: 0.25rem;
-  border: none;
-  background-color: var(--light-green);
-  transition: all 0.3s ease;
   cursor: pointer;
+  font: inherit;
+  border: none;
+  background-color: var(--green);
+  color: white;
+  padding: 0.75rem clamp(1rem, 4vw, 3rem);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.header__btn:hover {
-  background-color: var(--green);
+.header__btn:hover,
+.header__btn:active {
+  background-color: #3fce3f;
+}
+
+.header__btn-icon {
+  margin-right: 0.6125rem;
+  font-size: 1.6rem;
+}
+
+.header__btn-badge {
+  background-color: green;
+  padding: 0.25rem 1rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+  font-weight: bold;
 }

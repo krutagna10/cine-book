@@ -1,14 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./MovieCard.css";
 
-function MovieCard({ index, item }) {
+function MovieCard({ item }) {
   const navigate = useNavigate();
-
-  console.log(item);
 
   function handleClick() {
     localStorage.setItem("movie", JSON.stringify(item.show));
-    navigate("/summary");
+    navigate("/booking");
   }
 
   return (
@@ -24,7 +22,7 @@ function MovieCard({ index, item }) {
         <p>Rating: {item.show.rating.average}</p>
         <p>Genre: {item.show.genres.join(", ")}</p>
         <button onClick={handleClick} className="card__btn btn btn--green">
-          Summary
+          View Details
         </button>
       </div>
     </div>

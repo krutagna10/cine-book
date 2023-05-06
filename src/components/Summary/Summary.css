@@ -1,16 +1,20 @@
-.summary-card {
+.summary-section {
+  padding-block: 3rem;
+}
+
+.summary {
   background-color: var(--white);
   box-shadow: 5px 12px 12px rgba(0, 0, 0, 0.6);
   border-radius: 0.5rem;
 }
 
 @media (min-width: 48rem) {
-  .summary-card {
+  .summary {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-.summary-card__content {
+.summary__content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -18,16 +22,16 @@
   justify-content: center;
 }
 
-.summary-card__link {
+.summary__link {
   text-decoration: none;
   color: black;
   text-align: center;
 }
 
-.summary-card > img {
+.summary__image {
   height: 100%;
 }
 
-.summary__card > button {
+.summary__btn {
   width: 100%;
 }

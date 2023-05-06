@@ -1,0 +1,23 @@
+.movies__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 48em) {
+  .movies__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.movies__search {
+  width: 100%;
+  margin-block: 1rem;
+  padding: 0.25rem;
+}
+
+.movies__text {
+  font-size: var(--font-size-200);
+  text-align: center;
+}

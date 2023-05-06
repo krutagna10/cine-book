@@ -3,7 +3,7 @@
   top: 20vh;
   left: 50%;
   /*width: 50%;*/
-  min-width: 24rem;
+  width: min(90vw, 24rem);
   background-color: white;
   padding: 1rem;
   border-radius: 14px;

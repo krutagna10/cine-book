@@ -10,7 +10,7 @@
 
   /* Font Sizes*/
   --font-size-300: 2rem;
-  --font-size-200: 0.875rem;
+  --font-size-200: 1.25rem;
   --font-size-100: 0.75rem;
 
   /* Color */
@@ -66,7 +66,7 @@ body {
   font-family: var(--font-barlow-condensed);
   min-height: 100vh;
   line-height: 1.5;
-  background-color: #e7e0e0;
+  background-color: #dee2e6;
   position: relative;
   font-weight: 500;
 }

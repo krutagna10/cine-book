@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import Summary from "./pages/Summary/Summary";
+import Booking from "./pages/Booking/Booking";
 
 function App() {
   return (
     <div className="app">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/summary" element={<Summary />} />
+        <Route path="/booking" element={<Booking />} />
       </Routes>
     </div>
   );
