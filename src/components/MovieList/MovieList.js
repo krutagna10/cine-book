@@ -9,7 +9,9 @@ function MovieList({ data }) {
     <Container className="movies grid">
       {data.map(
         (item, index) =>
-          item.show.image && <MovieCard item={item} index={index} key={index} />
+          item.show.image && (
+            <MovieCard item={item} index={index} key={item.show.id} />
+          )
       )}
     </Container>
   );

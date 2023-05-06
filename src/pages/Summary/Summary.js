@@ -8,8 +8,8 @@ function Summary() {
 
   return (
     <Main>
-      <div style={{}}>
-        <h1>Summary</h1>
+      <div>
+        {/*<h1 style={{ marginBottom: "3rem" }}>Book a Ticket</h1>*/}
         <SummaryCard movie={movie} />
       </div>
     </Main>
