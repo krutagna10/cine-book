@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./MovieCard.css";
 
 function MovieCard({ item }) {
@@ -13,7 +13,7 @@ function MovieCard({ item }) {
     <div className="card">
       <img
         className="card__image"
-        src={item.show.image.medium}
+        src={item.show.image.original}
         alt={item.show.name}
       />
       <div className="card__content flow">

@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import Main from "../../layout/Main";
 import Movies from "../../components/Movies/Movies";
-import Backdrop from "../../components/UI/Backdrop/Backdrop";
-import Modal from "../../components/UI/Modal/Modal";
-import BookTicket from "../../components/BookTicket/BookTicket";
 
 function Home() {
   const [data, setData] = useState([]);
@@ -21,7 +18,11 @@ function Home() {
   }
 
   if (isLoading) {
-    return <h2>Loading...</h2>;
+    return (
+      <div className="loading">
+        <h2>Loading...</h2>
+      </div>
+    );
   }
 
   return (
