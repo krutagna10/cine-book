@@ -1,5 +1,5 @@
 # Cine Book
-Cine Book is demo application used to book movie tickets
+Cine Book is an impressive demo application designed to provide a seamless movie ticket booking experience
 
 ### Links
 
