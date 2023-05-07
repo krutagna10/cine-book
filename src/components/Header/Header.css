@@ -16,7 +16,7 @@
   cursor: pointer;
   font: inherit;
   border: none;
-  background-color: var(--green);
+  background-color: #43c943;
   color: white;
   padding: 0.75rem clamp(1rem, 4vw, 3rem);
   display: flex;
@@ -29,7 +29,7 @@
 
 .header__btn:hover,
 .header__btn:active {
-  background-color: #3fce3f;
+  background-color: #1a8f1a;
 }
 
 .header__btn-icon {
