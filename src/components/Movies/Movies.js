@@ -30,7 +30,7 @@ function Movies({ movies }) {
       <Container className="movies">
         <div className="flex flex--align-center flex--gap">
           <label style={{ whiteSpace: "nowrap" }}>
-            Sort by rating: {"  "}
+            SORT BY RATING => {"  "}
             <input type="checkbox" onChange={handleIsSortedChange} />
           </label>
           <input
