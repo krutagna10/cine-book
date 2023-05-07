@@ -7,6 +7,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  border: 1px solid black;
 }
 
 .card__content {
