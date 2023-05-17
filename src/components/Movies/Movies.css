@@ -1,3 +1,7 @@
+.movies-section {
+  padding-block: 2rem;
+}
+
 .movies__list {
   display: grid;
   grid-template-columns: 1fr;

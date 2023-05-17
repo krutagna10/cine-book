@@ -2,12 +2,12 @@
   --gap: 1.5rem;
 
   background-color: var(--white);
-  box-shadow: 5px 12px 12px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.6);
   border-radius: 0.5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-  border: 1px solid #7c7a7a;
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .card__content {
