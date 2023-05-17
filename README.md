@@ -8,7 +8,6 @@ Cine Book is an impressive demo application designed to provide a seamless movie
 ### Screenshot
 
 ![](screenshot/Screenshot1.png)
-![](screenshot/Screenshot2.png)
 
 ### Built with
 
